@@ -225,15 +225,12 @@ namespace WindowsFormsApp1
             {
                 Content = new StringContent($@"
                 {{
-                  ""model"": ""llama3:8b-instruct-fp16"",
+                  ""model"": ""llama3:8b-instruct-q8_0"",
                   ""prompt"": ""{_prompt}"",
 
                   ""format"": ""json"",
                   ""stream"": false,
-                  ""options"": {{
-                    ""num_predict"": -1
-                  }},
-
+              
                   ""system"":  ""{_systemPrompt}""
                 }}
             ", Encoding.UTF8, "application/json")
