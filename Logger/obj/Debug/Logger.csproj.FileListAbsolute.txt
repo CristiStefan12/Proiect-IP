@@ -1,0 +1,6 @@
+D:\Documents\Proiect-IP\Logger\bin\Debug\Logger.dll
+D:\Documents\Proiect-IP\Logger\bin\Debug\Logger.pdb
+D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.csproj.AssemblyReference.cache
+D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.dll
+D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.pdb

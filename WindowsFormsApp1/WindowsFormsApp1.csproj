@@ -121,5 +121,15 @@
   <ItemGroup>
     <None Include="Resources\logo-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{5efd687f-356c-4930-a5c4-1cfcd47aafd6}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ollama\Ollama.csproj">
+      <Project>{0897082c-0377-49ed-bc63-1d736e809695}</Project>
+      <Name>Ollama</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
