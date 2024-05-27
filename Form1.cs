@@ -192,6 +192,11 @@ namespace WindowsFormsApp1
                 });
             }
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Project realized by Andrei-Cristinel Vieru, Sabina Nadejda Barila, Maria Agape and Cristian-Mihai Ștefan.");
+        }
     }
 
     class OllamaLoggerDecorator
