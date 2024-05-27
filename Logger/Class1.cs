@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 /**************************************************************************
  *                                                                        *
- *  Description: <insert description here>                                *
+ *  Description: Decorate any async function to log their behaviour       *
  *  Website:     https://pushi.party                                      *
  *  Copyright:   (c) 2024 Maria Agape                                     *
  *  SPDX-License-Identifier: AGPL-3.0-only                                *

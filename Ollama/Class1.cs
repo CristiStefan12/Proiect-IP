@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 /**************************************************************************
  *                                                                        *
- *  Description: <insert description here>                                *
+ *  Description: Creates the ollama connection                            *
  *  Website:     https://pushi.party                                      *
  *  Copyright:   (c) 2024 Andrei-Cristinel Vieru                          *
  *  SPDX-License-Identifier: AGPL-3.0-only                                *

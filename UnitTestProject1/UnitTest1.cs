@@ -12,7 +12,7 @@ using System.Text.Json;
 
 /**************************************************************************
  *                                                                        *
- *  Description: <insert description here>                                *
+ *  Description: Unit tests                                               *
  *  Website:     https://pushi.party                                      *
  *  Copyright:   (c) 2024 Sabina Nadejda Barila                           *
  *  SPDX-License-Identifier: AGPL-3.0-only                                *

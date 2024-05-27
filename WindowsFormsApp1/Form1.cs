@@ -12,7 +12,7 @@ using static Guna.UI2.Native.WinApi;
 
 /**************************************************************************
  *                                                                        *
- *  Description: <insert description here>                                *
+ *  Description: UI entry point                                           *
  *  Website:     https://pushi.party                                      *
  *  Copyright:   (c) 2024 Cristian-Mihai Stefan                           *
  *  SPDX-License-Identifier: AGPL-3.0-only                                *
