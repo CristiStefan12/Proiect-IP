@@ -4,3 +4,9 @@ D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.csproj.AssemblyReference.cache
 D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
 D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.dll
 D:\Documents\Proiect-IP\Logger\obj\Debug\Logger.pdb
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Logger\bin\Debug\Logger.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Logger\bin\Debug\Logger.pdb
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Logger\obj\Debug\Logger.csproj.AssemblyReference.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Logger\obj\Debug\Logger.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Logger\obj\Debug\Logger.pdb

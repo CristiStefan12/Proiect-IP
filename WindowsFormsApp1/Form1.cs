@@ -62,6 +62,13 @@ namespace WindowsFormsApp1
 
         }
 
+        /// <summary>
+        /// Handles the click event of the `guna2Button1` button.
+        /// Gathers selected items from `listBox1` and the checked radio button from `guna2GroupBox1`,
+        /// sends a query to the `OllamaAdaptor` to get cooking instructions, and displays the result in `guna2TextBox1`.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">An EventArgs that contains the event data.</param>
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             string listBoxItemsStr = String.Join(", ", listBox1.Items
@@ -115,6 +122,13 @@ namespace WindowsFormsApp1
 
         }
 
+        /// <summary>
+        /// Handles the click event of the `guna2CircleButton1` button.
+        /// Adds the text from `textBox1` to `listBox1` if it is not already present,
+        /// then clears the text in `textBox1`.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">An EventArgs that contains the event data.</param>
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             if (!listBox1.Items.Contains(textBox1.Text))
@@ -130,6 +144,13 @@ namespace WindowsFormsApp1
 
         }
 
+        /// <summary>
+        /// Handles the SelectedIndexChanged event of the `listBox1` control.
+        /// Updates the text in `textBox1` to the currently selected item in `listBox1`.
+        /// If no item is selected, clears the text in `textBox1`.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">An EventArgs that contains the event data.</param>
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem == null)
@@ -141,6 +162,13 @@ namespace WindowsFormsApp1
             }
         }
 
+        /// <summary>
+        /// Handles the click event of the `guna2Button2` button.
+        /// Collects items from `listBox1`, sends a query to generate creative recipe names using the specified ingredients,
+        /// and updates `guna2GroupBox1` with the generated recipe names as radio buttons.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">An EventArgs that contains the event data.</param>
         private async void guna2Button2_Click(object sender, EventArgs e)
         {
             string listBoxItemsStr = String.Join(", ", listBox1.Items

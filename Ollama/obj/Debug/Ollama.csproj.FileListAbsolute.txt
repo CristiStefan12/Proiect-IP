@@ -24,3 +24,29 @@ D:\Documents\Proiect-IP\Ollama\bin\Debug\System.Text.Json.xml
 D:\Documents\Proiect-IP\Ollama\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Documents\Proiect-IP\Ollama\bin\Debug\System.ValueTuple.xml
 D:\Documents\Proiect-IP\Ollama\obj\Debug\Ollama.csproj.Up2Date
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\Ollama.dll.config
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\Ollama.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\Ollama.pdb
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Buffers.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Memory.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Numerics.Vectors.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Text.Encodings.Web.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Text.Json.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.ValueTuple.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Buffers.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Memory.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Numerics.Vectors.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Text.Encodings.Web.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Text.Json.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\bin\Debug\System.ValueTuple.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\obj\Debug\Ollama.csproj.AssemblyReference.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\obj\Debug\Ollama.csproj.CoreCompileInputs.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\obj\Debug\Ollama.csproj.Up2Date
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\obj\Debug\Ollama.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\Ollama\obj\Debug\Ollama.pdb

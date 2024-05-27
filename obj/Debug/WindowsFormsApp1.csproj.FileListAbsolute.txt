@@ -1,0 +1,42 @@
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\bin\Debug\Guna.UI2.dll
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Local Disk D\Documents\School\IP\UI IP PROIECT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\WindowsFormsApp1.exe.config
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\WindowsFormsApp1.exe
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\WindowsFormsApp1.pdb
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\Guna.UI2.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Buffers.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Memory.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Numerics.Vectors.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Text.Encodings.Web.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Text.Json.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.ValueTuple.dll
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Buffers.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Memory.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Numerics.Vectors.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Text.Encodings.Web.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Text.Json.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\bin\Debug\System.ValueTuple.xml
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsF.A1EEDF9B.Up2Date
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.exe
+C:\Local Disk D\Documents\School\IP\Proiect-IP\obj\Debug\WindowsFormsApp1.pdb

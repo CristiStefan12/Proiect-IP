@@ -13,13 +13,21 @@ namespace Ollama
         private string _prompt;
         private string _systemPrompt;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OllamaAdaptor{T}"/> class with the specified prompts.
+        /// </summary>
+        /// <param name="prompt">The prompt to be used in the query.</param>
+        /// <param name="systemPrompt">The system prompt to be used in the query, with line breaks replaced by spaces.</param>
         public OllamaAdaptor(string prompt, string systemPrompt)
         {
             _prompt = prompt;
             _systemPrompt = systemPrompt.Replace("\r\n", " ").Replace("\r", " ").Replace("\n", " ");
         }
 
-
+        /// <summary>
+        /// Sends an HTTP POST request to the specified API endpoint to generate a response based on the given prompt and system prompt.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous operation, with a result of type <typeparamref name="T"/>.</returns>
         public async Task<T> RunQuery()
         {
             HttpClient client = new HttpClient();
@@ -52,10 +60,14 @@ namespace Ollama
         }
     }
 
-    // TODO: comment
+    /// <summary>
+    /// Represents a response from the Ollama API.
+    /// </summary>
     public class OllamaResponse
     {
-        // TODO: comment
+        /// <summary>
+        /// Gets or sets the main response content.
+        /// </summary>
         public string response { get; set; }
         // Unused
         // public string model { get; set; }
@@ -70,24 +82,37 @@ namespace Ollama
         // public int eval_duration { get; set; }
     }
 
-    // TODO: comment
+    /// <summary>
+    /// Represents a response containing a list of ingredients.
+    /// </summary>
     public class IngredientsResponse
-    {
-        // TODO: comment
+    {  /// <summary>
+       /// Gets or sets the list of ingredients.
+       /// </summary>
+
         public string[] ingredients { get; set; }
     }
 
-    // TODO: comment
+    /// <summary>
+    /// Represents a response containing a list of recipe names.
+    /// </summary>
     public class RecipeNamesResponse
     {
-        // TODO: comment
+        /// <summary>
+        /// Gets or sets the list of recipe names.
+        /// </summary>
         public string[] recipeNames { get; set; }
     }
 
-    // TODO: comment
+    /// <summary>
+    /// Represents a response containing a list of instructions.
+    /// </summary>
     public class InstructionsResponse
     {
-        // TODO: comment
+
+        /// <summary>
+        /// Gets or sets the list of instructions.
+        /// </summary>
         public string[] instructions { get; set; }
     }
 }
