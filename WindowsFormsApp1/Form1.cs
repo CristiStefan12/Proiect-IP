@@ -9,10 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Guna.UI2.Native.WinApi;
 
+
+/**************************************************************************
+ *                                                                        *
+ *  Description: <insert description here>                                *
+ *  Website:     https://pushi.party                                      *
+ *  Copyright:   (c) 2024 Cristian-Mihai Stefan                           *
+ *  SPDX-License-Identifier: AGPL-3.0-only                                *
+ *                                                                        *
+ **************************************************************************/
+
+
 namespace WindowsFormsApp1
 {
-
-
     public partial class Form1 : Form
     {
         string[] hiddenIngredients;
@@ -71,16 +80,25 @@ namespace WindowsFormsApp1
         /// <param name="e">An EventArgs that contains the event data.</param>
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
+            guna2TextBox1.Text = "";
+
             string listBoxItemsStr = String.Join(", ", listBox1.Items
                  .OfType<object>()
                  .Select(item => item.ToString())
                  .ToArray()
              );
 
-            var selectedRecipe = guna2GroupBox1.Controls.OfType<Guna2RadioButton>().FirstOrDefault(r => r.Checked).Text;
+            var selectedRecipe = guna2GroupBox1.Controls.OfType<Guna2RadioButton>().FirstOrDefault(r => r.Checked);
+
+            if (selectedRecipe == null)
+            {
+                MessageBox.Show("Select at least one recipe!");
+
+                return;
+            }
 
             var instructionsOllamaAdaptor = new OllamaAdaptor<InstructionsResponse>(
-                $"{selectedRecipe}; ingredients: {listBoxItemsStr}",
+                $"{selectedRecipe.Text}; ingredients: {listBoxItemsStr}",
                 @"
                   You are a master chef, an expert of food.
                     1. The recipe must have a minimum of 100 words worth of instructions in TEXT format
@@ -97,9 +115,18 @@ namespace WindowsFormsApp1
 
             var getInstructions = new Logger.OllamaLoggerDecorator<InstructionsResponse>(instructionsOllamaAdaptor.RunQuery);
 
-            var instructionsResponse = await getInstructions.Run();
+            try
+            {
+                MessageBox.Show("Started query to Ollama, please wait...");
 
-            guna2TextBox1.Text = String.Join(Environment.NewLine, instructionsResponse.instructions.Select(i => "- " + i));
+                var instructionsResponse = await getInstructions.Run();
+
+                guna2TextBox1.Text = String.Join(Environment.NewLine, instructionsResponse.instructions.Select(i => "- " + i));
+            }
+            catch (Exception _)
+            {
+                MessageBox.Show("Error while querying Ollama...");
+            }
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -131,7 +158,17 @@ namespace WindowsFormsApp1
         /// <param name="e">An EventArgs that contains the event data.</param>
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            if (!listBox1.Items.Contains(textBox1.Text))
+            if (textBox1.Text.Length < 1)
+            {
+                MessageBox.Show("Enter ingredient name!");
+
+                return;
+            }
+
+            if (listBox1.Items.Contains(textBox1.Text))
+            {
+                MessageBox.Show("Ingredient already exists!");
+            } else
             {
                 listBox1.Items.Add(textBox1.Text);
             }
@@ -211,21 +248,31 @@ namespace WindowsFormsApp1
 
             var getRecipies = new Logger.OllamaLoggerDecorator<RecipeNamesResponse>(recipeOllamaAdaptor.RunQuery);
 
-            var recipiesResponse = await getRecipies.Run();
-
-            guna2GroupBox1.Controls.Clear();
-
-            for (int i = 0; i < recipiesResponse.recipeNames.Length; i++)
+            try
             {
-                var recipeName = recipiesResponse.recipeNames[i];
+                MessageBox.Show("Started query to Ollama, please wait...");
 
-                guna2GroupBox1.Controls.Add(new Guna.UI2.WinForms.Guna2RadioButton
+                var recipiesResponse = await getRecipies.Run();
+
+                guna2GroupBox1.Controls.Clear();
+
+                for (int i = 0; i < recipiesResponse.recipeNames.Length; i++)
                 {
-                    Text = recipeName,
-                    Location = new System.Drawing.Point(0, 40 * (i + 1)),
-                    Width = 324,
-                    Height = 40,
-                });
+                    var recipeName = recipiesResponse.recipeNames[i];
+
+                    guna2GroupBox1.Controls.Add(new Guna.UI2.WinForms.Guna2RadioButton
+                    {
+                        Text = recipeName,
+                        Location = new System.Drawing.Point(0, 40 * (i + 1)),
+                        Width = 324,
+                        Height = 40,
+                    });
+                }
+
+            }
+            catch (Exception _)
+            {
+                MessageBox.Show("Error while querying Ollama...");
             }
         }
 

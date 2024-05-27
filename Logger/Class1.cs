@@ -2,7 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
+
+
+/**************************************************************************
+ *                                                                        *
+ *  Description: <insert description here>                                *
+ *  Website:     https://pushi.party                                      *
+ *  Copyright:   (c) 2024 Maria Agape                                     *
+ *  SPDX-License-Identifier: AGPL-3.0-only                                *
+ *                                                                        *
+ **************************************************************************/
+
 
 namespace Logger
 {

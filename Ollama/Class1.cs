@@ -6,18 +6,35 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
+/**************************************************************************
+ *                                                                        *
+ *  Description: <insert description here>                                *
+ *  Website:     https://pushi.party                                      *
+ *  Copyright:   (c) 2024 Andrei-Cristinel Vieru                          *
+ *  SPDX-License-Identifier: AGPL-3.0-only                                *
+ *                                                                        *
+ **************************************************************************/
+
 namespace Ollama
 {
     public class OllamaAdaptor<T>
     {
-        private string _prompt;
-        private string _systemPrompt;
+        private readonly string _prompt;
+        private readonly string _systemPrompt;
+        private readonly HttpClient _httpClient = new HttpClient();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OllamaAdaptor{T}"/> class with the specified prompts.
         /// </summary>
         /// <param name="prompt">The prompt to be used in the query.</param>
         /// <param name="systemPrompt">The system prompt to be used in the query, with line breaks replaced by spaces.</param>
+        public OllamaAdaptor(string prompt, string systemPrompt, HttpClient httpClient)
+        {
+            _prompt = prompt;
+            _systemPrompt = systemPrompt.Replace("\r\n", " ").Replace("\r", " ").Replace("\n", " ");
+            _httpClient = httpClient;
+        }
+
         public OllamaAdaptor(string prompt, string systemPrompt)
         {
             _prompt = prompt;
@@ -29,8 +46,7 @@ namespace Ollama
         /// </summary>
         /// <returns>A task that represents the asynchronous operation, with a result of type <typeparamref name="T"/>.</returns>
         public async Task<T> RunQuery()
-        {
-            HttpClient client = new HttpClient();
+        { 
             string url = "http://192.168.100.82:11434/api/generate";
 
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, url)
@@ -48,7 +64,7 @@ namespace Ollama
             ", Encoding.UTF8, "application/json")
             };
 
-            HttpResponseMessage response = await client.SendAsync(request);
+            HttpResponseMessage response = await _httpClient.SendAsync(request);
 
             response.EnsureSuccessStatusCode();
 
