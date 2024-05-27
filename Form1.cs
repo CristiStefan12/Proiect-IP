@@ -2,7 +2,9 @@
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace WindowsFormsApp1
 {
@@ -53,34 +55,10 @@ namespace WindowsFormsApp1
 
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-            string url = "http://192.168.100.82:11434/api/generate";
-
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, url)
-            {
-                Content = new StringContent(@"
-                {
-                  ""model"": ""llama3:8b-instruct-fp16"",
-                  ""prompt"": ""tomato sauce, cheese, parmesan"",
-
-                  ""format"": ""json"",
-                  ""stream"": false,
-                  ""options"": {
-                    ""num_predict"": -1
-                  },
-
-                  ""system"":  ""You are a master chef, an expert of food. Write 10 more ingredients commonly used in recipes with the ingredients provided. Respond only in JSON using this format. ```ts { ingredients: string[] } ```""
-                }
-            ", Encoding.UTF8, "application/json")
-            };
-
-            HttpResponseMessage response = await client.SendAsync(request);
-
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            var jsonResponse = JsonSerializer.Deserialize<OllamaResponse>(responseBody);
-            var llmResponseJson = JsonSerializer.Deserialize<IngredientsResponse>(jsonResponse.response);
+            var llmResponseJson = await new OllamaAdaptor<IngredientsResponse>(
+                "tomato sauce, cheese, parmesan",
+                "You are a master chef, an expert of food.Write 10 more ingredients commonly used in recipes with the ingredients provided.Respond only in JSON using this format. ```ts { ingredients: string[] } ```"
+             ).RunQuery();
 
             string a = "";
 
@@ -98,13 +76,65 @@ namespace WindowsFormsApp1
         }
     }
 
-    class OllamaResponse
+    class OllamaLoggerDecorator
     {
-        public string model { get; set; }
-        public string created_at { get; set; }
+        
+    }
+
+    class OllamaAdaptor<T>
+    {
+        private string _prompt;
+        private string _systemPrompt;
+
+        public OllamaAdaptor(string prompt, string systemPrompt)
+        {
+            _prompt = prompt;
+            _systemPrompt = systemPrompt;
+        }
+
+
+        public async Task<T> RunQuery()
+        {
+            HttpClient client = new HttpClient();
+            string url = "http://192.168.100.82:11434/api/generate";
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, url)
+            {
+                Content = new StringContent($@"
+                {{
+                  ""model"": ""llama3:8b-instruct-fp16"",
+                  ""prompt"": ""{_prompt}"",
+
+                  ""format"": ""json"",
+                  ""stream"": false,
+                  ""options"": {{
+                    ""num_predict"": -1
+                  }},
+
+                  ""system"":  ""{_systemPrompt}""
+                }}
+            ", Encoding.UTF8, "application/json")
+            };
+
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            response.EnsureSuccessStatusCode();
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+
+            var jsonResponse = JsonSerializer.Deserialize<OllamaResponse>(responseBody);
+
+            return JsonSerializer.Deserialize<T>(jsonResponse.response);
+        }
+    }
+
+    public class OllamaResponse
+    {
+        //public string model { get; set; }
+        //public string created_at { get; set; }
         public string response { get; set; }
-        public bool done { get; set; }
-        public int[] context { get; set; }
+        //public bool done { get; set; }
+        //public int[] context { get; set; }
         //public int total_duration { get; set; }
         //public int load_duration { get; set; }
         //public int prompt_eval_count { get; set; }
@@ -113,7 +143,7 @@ namespace WindowsFormsApp1
         //public int eval_duration { get; set; }
     }
 
-    class IngredientsResponse
+    public class IngredientsResponse
     {
         public string[] ingredients { get; set; }
     }
