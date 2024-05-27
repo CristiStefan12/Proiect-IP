@@ -280,5 +280,10 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Project realized by Andrei-Cristinel Vieru, Sabina Nadejda Barila, Maria Agape and Cristian-Mihai Ștefan.");
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"Happy_Cooking.chm");
+        }
     }
 }
